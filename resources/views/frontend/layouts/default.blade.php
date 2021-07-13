@@ -7,7 +7,7 @@
     <script>
         var current_class = "{{ $currentClass }}";
     </script>
-    <script src="public/highlight/highlight.pack.js"></script>
+    <script src="{{ asset('public/highlight/highlight.pack.js') }}"></script>
     <script>
         hljs.initHighlightingOnLoad();
     </script>
@@ -26,6 +26,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/styles.css">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://kit.fontawesome.com/8451842ce8.js" crossorigin="anonymous"></script>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 </head>
 
 <body>
