@@ -12,4 +12,4 @@ document.getElementById("logo-area").innerHTML = "<img src='public/img/logomark.
 document.getElementById("course-title").innerHTML = "<h1> Laravel Course for Beginners </h1>" +
     "<h2>Instructor: Moammer Farshid Enan </h2>";
 
-document.getElementById("day").innerHTML = "Day: 1";
+// document.getElementById("day").innerHTML = "Day: 1";

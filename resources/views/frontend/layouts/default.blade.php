@@ -7,7 +7,7 @@
     <script>
         var current_class = "{{ $currentClass }}";
     </script>
-    <script src="{{ asset('public/highlight/highlight.pack.js') }}"></script>
+    <script src="./public/highlight/highlight.pack.js"></script>
     <script>
         hljs.initHighlightingOnLoad();
     </script>
