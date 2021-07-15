@@ -2,7 +2,7 @@ var classes = {
     'index': {
         'icon': '<i class="fas fa-indent"></i>',
         'title': 'Index',
-        'url': 'home.html',
+        'url': '/',
     },
     'installation': {
         'icon': '<i class="fas fa-hand-point-right"></i>',

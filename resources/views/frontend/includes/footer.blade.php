@@ -9,8 +9,8 @@
     </div>
 
     <div class="classes">
-        <h3>
-            Contents
+        <h3 style="text-decoration: none; color:#d95034;">
+            <i class="fas fa-clipboard-list"></i> &nbsp; Contents
         </h3>
         <ul id="class_index">
         </ul>

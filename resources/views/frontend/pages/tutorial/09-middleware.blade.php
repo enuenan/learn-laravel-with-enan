@@ -16,69 +16,69 @@
         command to create custom middleware</p>
     <input type="text" readonly value="php artisan make:middleware CheckStatus" id="createMiddleware">
     <button value="copy" onclick="copyFunction('createMiddleware')" type="button" class="btn btn-block btn-info">
-        <i class="fas fa-copy"></i> Copy
+        <i class="fas fa-copy"></i> &nbsp; Copy
     </button>
 
     <p>After successfully create middleware, go to <span class="path">app/http/kernel.php</span> and register
         your custom middleware here :</p>
     <pre>
-        <code class="javascript">
-    protected $routeMiddleware = [
-        ....
-        'checkStatus' => \App\Http\Middleware\CheckStatus::class,
-    ];
-        </code>
-    </pre>
+            <code class="javascript">
+        protected $routeMiddleware = [
+            ....
+            'checkStatus' => \App\Http\Middleware\CheckStatus::class,
+        ];
+            </code>
+        </pre>
 
     <p> <b style="text-decoration: underline;">2. Implement Logic In Middleware: </b> After successfully
         register your middleware in laravel project, go to <span>app/http/middleware </span> and implement your
         logic here :</p>
 
     <pre>app/Http/Middleware/CheckStatus.php
-        <code class="javascript">
-    public function handle($request, Closure $next)
-    {
-        if (auth()->user()->status == 'active') {
-            return $next($request);
-        }
-        return response()->json('Your account is inactive');
+            <code class="javascript">
+        public function handle($request, Closure $next)
+        {
+            if (auth()->user()->status == 'active') {
+                return $next($request);
+            }
+            return response()->json('Your account is inactive');
 
-    }
-        </code>
-    </pre>
+        }
+            </code>
+        </pre>
 
     <p><b style="text-decoration: underline;">3. Create Route: </b>we will create a route and use custom
         middleware here. Filter http every request and protect routes :</p>
     <pre>
-        <code>
-    use App\Http\Controllers\HomeController;
+            <code>
+        use App\Http\Controllers\HomeController;
 
-    Route::middleware([CheckStatus::class])->group(function(){
+        Route::middleware([CheckStatus::class])->group(function(){
 
-        Route::get('home', [HomeController::class,'home']);
+            Route::get('home', [HomeController::class,'home']);
 
-    });
+        });
 
-    Route::get('home', [HomeController::class,'home'])->middleware('checkStatus');
+        Route::get('home', [HomeController::class,'home'])->middleware('checkStatus');
 
-    // Multiple Middleware Use
-    use App\Http\Middleware\CheckAge;
+        // Multiple Middleware Use
+        use App\Http\Middleware\CheckAge;
 
-    Route::middleware([CheckStatus::class,CheckAge::class])->group(function(){
-        Route::get('home', [HomeController::class,'home']);
-    });
+        Route::middleware([CheckStatus::class,CheckAge::class])->group(function(){
+            Route::get('home', [HomeController::class,'home']);
+        });
 
-    Route::group(['middleware' => ['checkStatus','other_middleware']], function (){
-        Route::get('home', [HomeController::class,'home']);
-    });
+        Route::group(['middleware' => ['checkStatus','other_middleware']], function (){
+            Route::get('home', [HomeController::class,'home']);
+        });
 
-    Route::middleware(['checkStatus', 'other_middleware'])->group(function () {
-        Route::get('home', [HomeController::class,'home']);
-    });
-    
-    Route::get('home', [HomeController::class,'home'])->middleware(['checkStatus', 'other_middleware'])
-        </code>
-    </pre>
+        Route::middleware(['checkStatus', 'other_middleware'])->group(function () {
+            Route::get('home', [HomeController::class,'home']);
+        });
+        
+        Route::get('home', [HomeController::class,'home'])->middleware(['checkStatus', 'other_middleware'])
+            </code>
+        </pre>
 
     <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_5iy2fmls.json" background="transparent" speed="1"
         loop autoplay></lottie-player>

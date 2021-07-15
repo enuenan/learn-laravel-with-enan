@@ -16,8 +16,7 @@ body a {
     height: 100vh;
     /* background: url('../img/bg.png') no-repeat center center fixed; */
     /* background: url('../img/tile_background8.png') no-repeat center center fixed; */
-    /* background-color: #228b8e96; */
-    background-color: #ffffff96;
+    background-color: #228b8e96;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -63,10 +62,8 @@ main {
     margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
-    /* border-radius: 5px; */
-    text-align: left;
     border-radius: 10px;
-    box-shadow: 0 -4px 20px rgb(0, 0, 1)
+    text-align: left;
 }
 
 main h1,
