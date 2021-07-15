@@ -19,9 +19,8 @@ use App\Http\Controllers\Section\SectionTwoController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', [HomeController::class, 'index']);
 
-Route::get('ip', [HomeController::class, 'ip']);
+Route::get('/', [HomeController::class, 'index']);
 
 // SECTION ONE
 Route::get('installation', [SectionOneController::class, 'installation']); //1
