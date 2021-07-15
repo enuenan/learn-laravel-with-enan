@@ -3,8 +3,8 @@
 
 <head>
     {{-- @include('frontend.includes.head') --}}
-    <link rel="stylesheet" href="{{ asset('public/css/default.css') }}">
-    <script src="{{ asset('public/tools/indice.js') }}"></script>
+    <link rel="stylesheet" href="public/css/default.css">
+    <script src="public/tools/indice.js"></script>
     <script>
         var current_class = "{{ $currentClass }}";
     </script>
@@ -29,6 +29,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
 
 </head>
 

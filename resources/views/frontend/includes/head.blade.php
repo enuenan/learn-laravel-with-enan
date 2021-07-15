@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="{{ asset('public/css/default.css') }}">
-<script src="{{ asset('public/tools/indice.js') }}"></script>
+<link rel="stylesheet" href="public/css/default.css">
+<script src="public/tools/indice.js"></script>
 <script>
     var current_class = "{{ $currentClass }}";
 </script>
