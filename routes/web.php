@@ -6,6 +6,8 @@ use App\Http\Controllers\Section\SectionOneController;
 use App\Http\Controllers\Section\SectionTwoController;
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('gitPush', [HomeController::class, 'gitPush']);
+Route::get('heroku', [HomeController::class, 'heroku']);
 
 // SECTION ONE
 Route::get('installation', [SectionOneController::class, 'installation']); //1
@@ -20,3 +22,8 @@ Route::get('middleware', [SectionOneController::class, 'middlewaref']); //9
 
 // SECTION TWO
 Route::get('crud', [SectionTwoController::class, 'crud']);
+
+
+// POST CONTACT
+Route::get('form', [HomeController::class, 'contactform'])->name('form');
+Route::post('form', [HomeController::class, 'formData'])->name('form');

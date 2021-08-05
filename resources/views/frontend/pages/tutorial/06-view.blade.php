@@ -23,7 +23,7 @@
     </p>
     <pre>
         <code>
-            <div>Number of items: &#123;&#123; count($items) &#125;&#125;.</div>
+            &#60;div&#62;Number of items: &#123;&#123; count($items) &#125;&#125;.&#60;/div&#62;
         </code>
     </pre>
 

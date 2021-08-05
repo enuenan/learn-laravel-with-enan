@@ -35,20 +35,20 @@
         welcome page can be seen as shown in the screenshot given below −
     </p>
     <pre>
-            <code class="javascript">
-        Route::get($uri, $callback);
-        Route::post($uri, $callback);
-        Route::put($uri, $callback);
-        Route::patch($uri, $callback);
-        Route::delete($uri, $callback);
-        Route::options($uri, $callback);
-                        
-        // Example
-        Route::get('/', function () {
-            return view('welcome');
-        });
-            </code>
-        </pre>
+        <code class="javascript">
+    Route::get($uri, $callback);
+    Route::post($uri, $callback);
+    Route::put($uri, $callback);
+    Route::patch($uri, $callback);
+    Route::delete($uri, $callback);
+    Route::options($uri, $callback);
+                    
+    // Example
+    Route::get('/', function () {
+        return view('welcome');
+    });
+        </code>
+    </pre>
 
     <p>
         <span style="text-decoration: underline; font-weight: bold"> Route parameters </span>: These parameters
@@ -57,12 +57,12 @@
         route parameters as shown below −
     </p>
     <pre>
-            <code class="javascript">
-        Route::get('ID/{id}',function($id) {
-            echo 'ID: '.$id;
-        });
-            </code>
-        </pre>
+        <code class="javascript">
+    Route::get('ID/{id}',function($id) {
+        echo 'ID: '.$id;
+    });
+        </code>
+    </pre>
 
     <p>
         <span style="text-decoration: underline; font-weight: bold"> Named Routes </span>: Named routes allow a
@@ -70,12 +70,12 @@
         route definition. The following code shows an example for creating named routes with controller −
     </p>
     <pre>
-            <code class="javascript">
-        Route::get('/user/profile', function () {
-            return view('profile')->name('profile');
-        });
-            </code>
-        </pre>
+        <code class="javascript">
+    Route::get('/user/profile', function () {
+        return view('profile')->name('profile');
+    });
+        </code>
+    </pre>
 
     <p>
         <span style="text-decoration: underline; font-weight: bold"> Resource route </span>: There is a easy way
@@ -83,18 +83,18 @@
         chapter. Now just see the structure of resource route.
     </p>
     <pre>
-            <code class="javascript">
-        use App\Http\Controllers\UserController;
+        <code class="javascript">
+    use App\Http\Controllers\UserController;
 
-        Route::resource('user', UserController::class);
-            </code>
-        </pre>
+    Route::resource('user', UserController::class);
+        </code>
+    </pre>
 
     <p>
         To check all the links of the website run the below command:-
     </p>
     <input type="text" readonly value="php artisan route:list" id="route_list">
-    <button value="copy" onclick="copyFunction('route_list')" type="button" class="btn btn-block btn-info">
+    <button value="copy" onclick="copyFunction('route_list', 'route_listButton')" id="route_listButton" type="button" class="btn btn-block btn-info">
         <i class="fas fa-copy"></i> &nbsp; Copy
     </button>
 

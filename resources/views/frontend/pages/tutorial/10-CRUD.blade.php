@@ -18,7 +18,7 @@
         version application using bellow command, So open your terminal OR command prompt and run bellow command:
     </p>
     <input type="text" readonly value="laravel new CRUD" name="" id="crud">
-    <button value="copy" onclick="copyFunction('crud')" type="button" class="btn btn-block btn-info">
+    <button value="copy" onclick="copyFunction('crud', 'crudButton')" id="crudButton" type="button" class="btn btn-block btn-info">
         <i class="fas fa-copy"></i> &nbsp; Copy
     </button>
 
@@ -44,7 +44,7 @@
         command, so first run bellow command:
     </p>
     <input type="text" readonly value="php artisan make:model Product -m" name="" id="model">
-    <button value="copy" onclick="copyFunction('model')" type="button" class="btn btn-block btn-info">
+    <button value="copy" onclick="copyFunction('model', 'modelButton')" id="modelButton" type="button" class="btn btn-block btn-info">
         <i class="fas fa-copy"></i> &nbsp; Copy
     </button>
 
@@ -92,7 +92,7 @@
         Ater this we have to run below command to migrate
     </p>
     <input type="text" readonly value="php artisan migrate" name="" id="migrate">
-    <button value="copy" onclick="copyFunction('migrate')" type="button" class="btn btn-block btn-info">
+    <button value="copy" onclick="copyFunction('migrate', 'migrateButton')" id="migrateButton" type="button" class="btn btn-block btn-info">
         <i class="fas fa-copy"></i> &nbsp; Copy
     </button>
 
@@ -112,7 +112,7 @@
     <p>7)destroy()</p>
 
     <input type="text" readonly value="php artisan make:controller ProductController -r" name="" id="resource">
-    <button value="copy" onclick="copyFunction('resource')" type="button" class="btn btn-block btn-info">
+    <button value="copy" onclick="copyFunction('resource', 'resourceButton')" id="resourceButton" type="button" class="btn btn-block btn-info">
         <i class="fas fa-copy"></i> &nbsp; Copy
     </button>
 
