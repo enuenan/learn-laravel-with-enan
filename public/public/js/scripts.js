@@ -7,6 +7,7 @@
 //     "</div>";
 
 document.getElementById("logo-area").innerHTML = "<img src='public/img/logomark.min.svg' alt='Laravel'>";
+document.getElementById("logo-area").innerHTML = "<a href='/'><img src='public/img/logomark.min.svg' alt='Laravel'></a>";
 // document.getElementById("logo-area").innerHTML = "<img src='./public/img/Photo_1625506961500.jpg' alt='Laravel'>";
 
 document.getElementById("course-title").innerHTML = "<h1> Laravel Course for Beginners </h1>" +
